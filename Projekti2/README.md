@@ -21,9 +21,9 @@ Kaikki ohjelmat on toteutettu omiin lähdetiedostoihin
 
 
 ### my-grep
-- Toteutus - kesken
-- Testaus - kesken
-- Dokumentointi - kesken
+- Toteutus - valmis 22.07.2026 10:00pm
+- Testaus - valmis 22.07.2026 10:00pm
+- Dokumentointi - valmis 22.07.2026 10:00pm
 
 ### my-zip
 - Toteutus - kesken
@@ -71,4 +71,55 @@ Ohjelmaa testattiin näillä komennoilla:
 
 ## Virheenkäsittely:
 Jos tiedostoa ei voida avata: my-cat: cannot open file
+Loppuu virhekoodilla 1
+
+# my-grep
+
+## Toteutus:
+Ohjelma etsii hakusanan yhdestä tai useammasta tiedostosta ja tulostaa kaikki hakusanan sisältävät rivit standard outputiin.
+
+Ohjelmassa käytetään funktioita:
+- fopen()
+- getline()
+- strstr()
+- printf()
+- fclose()
+
+## Ohjelman toiminta:
+- Luetaan hakusana komentoriviltä
+- Käydään kaikki tiedostot läpi
+- Avataan tiedosto
+- Luetaan tiedosto riveittäin
+- Tarkistetaan sisältääkö rivi hakusanan
+- Tulostetaan hakusanan sisältävät rivit
+- Suljetaan tiedosto
+
+Note: case sensitive, grep, Grep ja GREP ovat eri hakusanat
+
+## Ohjelman käyttö:
+
+Ei hakusanaa: ./my-grep
+
+Hakusana standard inputista: ./my-grep <hakusana>
+
+Yksi tiedosto: ./my-grep <hakusana> test/<input>
+
+Useita tiedostoja: ./my-grep <hakusana> test/<input> test/<input>
+
+## Testaus:
+
+Ohjelmaa testattiin näillä komennoilla:
+
+./my-grep
+./my-grep grep
+./my-grep grep test/input.txt
+./my-grep grep test/input.txt test/input2.txt
+./my-grep grep test/eiole.txt
+
+## Virheenkäsittely:
+
+Ei hakusanaa: my-grep: searchterm [file ...]
+
+Jos tiedostoa ei voida avata: my-grep: cannot open file
+
 Loppuu virhekoodilla 1
