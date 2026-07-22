@@ -1,4 +1,7 @@
-# Ensimmäinen projekti perustuu kurssin ohjeistukseen ja kurssikirjan materiaaleihin
+# Projekti 1 dokumentointi
+Tässä tiedostossa käydään projektin 1 valmistus, toteutus, toiminta, käyttö ja testaus
+
+## Ensimmäinen projekti perustuu kurssin ohjeistukseen ja kurssikirjan materiaaleihin
 https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse
 
 ## Status:
