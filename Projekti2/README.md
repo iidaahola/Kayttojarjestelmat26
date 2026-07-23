@@ -26,9 +26,9 @@ Kaikki ohjelmat on toteutettu omiin lähdetiedostoihin
 - Dokumentointi - valmis 22.07.2026 10:00pm
 
 ### my-zip
-- Toteutus - kesken
-- Testaus - kesken
-- Dokumentointi - kesken
+- Toteutus - kesken 27.07.2026 3:00pm - Toimii yhdellä input tiedostolla
+- Testaus - kesken 27.07.2026 3:00pm - Toimii yhdellä input tiedostolla
+- Dokumentointi - kesken 27.07.2026 3:00pm - Aloitettu
 
 ### my-unzip
 - Toteutus - kesken
@@ -122,4 +122,42 @@ Ei hakusanaa: my-grep: searchterm [file ...]
 
 Jos tiedostoa ei voida avata: my-grep: cannot open file
 
+Loppuu virhekoodilla 1
+
+# my-zip
+
+## Toteutus:
+Ohjelma lukee yhden tai useamman tiedoston ja tulostaa sisällön standard outputiin.
+
+Ohjelmassa käytetään funktioita:
+- fopen()
+- fgets()
+- printf()
+- fclose()
+
+## Ohjelman toiminta:
+- Käydään komentorivin tiedostot läpi
+- Avataan kaikki tiedostot
+- Luetaan tiedosto riveittäin
+- Tulostetaan luetut rivit
+- Suljetaan tiedosto
+
+Note: Jos viimeisellä rivillä ei ole input tiedostosssa rivinvaihtoa, tuloste jatkuu suoraan perään. Tämä ilmeisesti toivottu tapa? Ei tarvitse sisällyttää ohjelmaan rivinvaihtoa loppuun?
+
+## Ohjelman käyttö:
+
+Ei tiedostoja: ./my-cat
+Yksi tiedosto: ./my-cat test/<input>
+Useita tiedostoja: ./my-cat test/<input> test/<input>
+
+## Testaus:
+Ohjelmaa testattiin näillä komennoilla:
+./my-cat
+./my-cat test/input.txt
+./my-cat test/input.txt test/input2.txt
+./my-cat test/eiole.txt
+./my-cat test/input.txt test/eiole.txt
+
+## Virheenkäsittely:
+Jos tiedostoa ei voida avata: my-cat: cannot open file
 Loppuu virhekoodilla 1
