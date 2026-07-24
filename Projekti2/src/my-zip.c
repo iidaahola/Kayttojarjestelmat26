@@ -5,8 +5,7 @@
 void pakkaaTiedosto(FILE *pTiedosto);
 
 /* pääohjelma */
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
     FILE *pTiedosto = NULL;
     int i = 0;
 
@@ -38,8 +37,7 @@ int main(int argc, char *argv[])
 /* Aliohjelmat */
 
 /* pakkaa tiedoston sisältö */
-void pakkaaTiedosto(FILE *pTiedosto)
-{
+void pakkaaTiedosto(FILE *pTiedosto){
     int cMerkki = 0;
     int cEdellinen = EOF;
     int iLkm = 0;
