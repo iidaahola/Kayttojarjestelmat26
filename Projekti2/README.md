@@ -26,14 +26,20 @@ Kaikki ohjelmat on toteutettu omiin lähdetiedostoihin
 - Dokumentointi - valmis 22.07.2026 10:00pm
 
 ### my-zip
-- Toteutus - kesken 27.07.2026 3:00pm - Toimii yhdellä input tiedostolla
-- Testaus - kesken 27.07.2026 3:00pm - Toimii yhdellä input tiedostolla
-- Dokumentointi - kesken 27.07.2026 3:00pm - Aloitettu
+- Toteutus 
+    - 24.07.2026 3:00pm - Toimii yhdellä input tiedostolla
+    - valmis 24.07.2026 9:30pm
+- Testaus 
+    - 24.07.2026 3:00pm
+    - valmis 24.07.2026 9:30pm
+- Dokumentointi 
+    - 24.07.2026 3:00pm - Aloitettu
+    - valmis 24.07.2026 10:00
 
 ### my-unzip
-- Toteutus - kesken
-- Testaus - kesken
-- Dokumentointi - kesken
+- Toteutus - valmis 24.07.2026 9:30pm
+- Testaus - valmis 24.07.2026 9:30pm
+- Dokumentointi - valmis 24.07.2026 10:00pm
 
 # my-cat
 
@@ -53,7 +59,7 @@ Ohjelmassa käytetään funktioita:
 - Tulostetaan luetut rivit
 - Suljetaan tiedosto
 
-Note: Jos viimeisellä rivillä ei ole input tiedostosssa rivinvaihtoa, tuloste jatkuu suoraan perään. Tämä ilmeisesti toivottu tapa? Ei tarvitse sisällyttää ohjelmaan rivinvaihtoa loppuun?
+Note: Jos viimeisellä rivillä ei ole input tiedostosssa rivinvaihtoa, tuloste jatkuu suoraan perään. Tämä ilmeisesti toivottu tapa?
 
 ## Ohjelman käyttö:
 
@@ -127,37 +133,74 @@ Loppuu virhekoodilla 1
 # my-zip
 
 ## Toteutus:
-Ohjelma lukee yhden tai useamman tiedoston ja tulostaa sisällön standard outputiin.
+Ohjelma pakkaa yhden tai useamman tiedoston RLE -pakkausta käyttäen. Kirjoittaa pakatun datan standard outputtiin.
 
 Ohjelmassa käytetään funktioita:
 - fopen()
-- fgets()
+- fgetc()
+- fwrite()
+- fclose()
+
+## Ohjelman toiminta:
+- Käydään komentorivin tiedostot läpi
+- Luetaan tiedosto merkeittäin
+- Lasketaan peräkkäisten samanlaisten merkkien määärä
+- Kirjoitetaan jokaisesta jaksosta 4 tavun kokonaisluku ja 1 merkki
+- Useita tiedostoja käsitellään yhtenä jatkuvuutena
+
+## Ohjelman käyttö:
+
+Ei tiedostoja: ./my-zip
+Yksi tiedosto: ./my-zip test/<input> > test/<output>
+Useita tiedostoja: ./my-zip test/<input> test/<input> > test/<output>
+
+## Testaus:
+Ohjelmaa testattiin näillä komennoilla:
+./my-zip
+./my-zip test/input3.txt > test/output.z
+xxd test/output.z
+./my-zip test/input3.txt test/input4.txt > test/output2.z
+./my-zip test/eiole.txt
+
+## Virheenkäsittely:
+Ei tiedostoja: my-zip: file1 [file2 ...]
+Jos tiedostoa ei voida avata: my-zip: cannot open file
+
+Loppuu virhekoodilla 1
+
+# my-unzip
+
+## Toteutus:
+Ohjelma purkaa my-zip ohjelman tuottaman RLE tiedoston ja tulostaa alkuperäisen sisällön standard outputtiin
+
+Ohjelmassa käytetään funktioita:
+- fopen()
+- fread()
 - printf()
 - fclose()
 
 ## Ohjelman toiminta:
 - Käydään komentorivin tiedostot läpi
-- Avataan kaikki tiedostot
-- Luetaan tiedosto riveittäin
-- Tulostetaan luetut rivit
-- Suljetaan tiedosto
-
-Note: Jos viimeisellä rivillä ei ole input tiedostosssa rivinvaihtoa, tuloste jatkuu suoraan perään. Tämä ilmeisesti toivottu tapa? Ei tarvitse sisällyttää ohjelmaan rivinvaihtoa loppuun?
+- Luetaan yksi pakkausjakso kerrallaan
+- Luetaan ensin 4 tavun kokonaisluku, sitten seuraava merkki
+- Tulostetaan merkki luetun määrän verran
+- Jatketaan loppuun saakka
 
 ## Ohjelman käyttö:
 
-Ei tiedostoja: ./my-cat
-Yksi tiedosto: ./my-cat test/<input>
-Useita tiedostoja: ./my-cat test/<input> test/<input>
+Ei tiedostoja: ./my-unzip
+Yksi tiedosto: ./my-unzip test/<output>
+Useita tiedostoja: ./my-unzip test/<output> test/<output>
 
 ## Testaus:
 Ohjelmaa testattiin näillä komennoilla:
-./my-cat
-./my-cat test/input.txt
-./my-cat test/input.txt test/input2.txt
-./my-cat test/eiole.txt
-./my-cat test/input.txt test/eiole.txt
+./my-unzip
+./my-unzip test/output.z
+./my-unzip test/output2.z
+./my-unzip test/eiole.z
 
 ## Virheenkäsittely:
-Jos tiedostoa ei voida avata: my-cat: cannot open file
+Ei tiedostoja: my-unzip: file1 [file2 ...]
+Jos tiedostoa ei voida avata: my-unzip: cannot open file
+
 Loppuu virhekoodilla 1
