@@ -31,8 +31,11 @@ Koko projekti: dokumentoinnin päivittäminen
 
 26.07.2026
 Projekti 3: toteutus, testaaminen ja dokumentointi
+
+27.07.2026
+Projekti 3: toteutus, testaaminen ja dokumentointi
 Projekti 3 valmis
 Koko projekti: dokumentoinnin päivittäminen
 
-27.07.2026
+28.07.2026
 Projektiraportin luominen, viimeistely ja projektin palauttaminen
