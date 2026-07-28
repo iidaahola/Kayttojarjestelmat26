@@ -101,3 +101,24 @@ pwd & whoami & date
 
 ## Batch mode
 ./wish test/batch.txt
+
+# Lähteeet
+Tehtävänanto:
+https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/processes-shell
+
+Linux manuaalit:
+https://man7.org/linux/man-pages/man2/fork.2.html
+https://man7.org/linux/man-pages/man3/exec.3.html
+https://man7.org/linux/man-pages/man2/waitpid.2.html
+https://man7.org/linux/man-pages/man2/dup.2.html
+https://man7.org/linux/man-pages/man2/open.2.html
+https://man7.org/linux/man-pages/man3/getline.3.html
+https://man7.org/linux/man-pages/man3/strtok.3.html
+https://man7.org/linux/man-pages/man2/access.2.html
+https://man7.org/linux/man-pages/man2/chdir.2.html
+
+Stack overflow:
+https://stackoverflow.com/questions/31519435/program-stuck-pipe-file-descriptor-open-when-shouldnt
+https://stackoverflow.com/questions/48970420/creating-a-shell-in-c-how-would-i-implement-input-and-output-redirection
+https://stackoverflow.com/questions/7218625/what-are-the-differences-between-strtok-and-strsep-in-c
+https://stackoverflow.com/questions/900411/how-to-properly-wait-for-foreground-background-processes-in-my-own-shell-in-c

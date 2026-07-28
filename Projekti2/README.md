@@ -204,3 +204,23 @@ Ei tiedostoja: my-unzip: file1 [file2 ...]
 Jos tiedostoa ei voida avata: my-unzip: cannot open file
 
 Loppuu virhekoodilla 1
+
+# Lähteeet
+Tehtävänanto:
+https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-utilities
+
+Linux manuaalit:
+https://man7.org/linux/man-pages/man3/fopen.3.html
+https://man7.org/linux/man-pages/man3/fgets.3p.html
+https://man7.org/linux/man-pages/man3/getline.3.html
+https://man7.org/linux/man-pages/man3/strstr.3.html
+https://man7.org/linux/man-pages/man3/fgetc.3.html
+https://man7.org/linux/man-pages/man3/fread.3.html
+
+POSIX standardi
+https://pubs.opengroup.org/onlinepubs/9699919799/
+
+Stack overflow:
+https://stackoverflow.com/questions/2409504/using-c-filestreams-fstream-how-can-you-determine-the-size-of-a-file
+https://stackoverflow.com/questions/18277304/using-stdcout-in-multiple-threads
+https://stackoverflow.com/questions/12784766/check-substring-exists-in-a-string-in-c

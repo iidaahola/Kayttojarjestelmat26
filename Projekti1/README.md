@@ -66,3 +66,25 @@ Tuloste: error: cannot open file 'missing.txt'
 Jos dynaaminen muistinvaraus epäonnistuu, ohjelma tulostaa
 malloc failed
 ja lopettaa suorituksen virhekoodilla 1
+
+# Lähteeet
+Tehtävänanto:
+https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-reverse
+
+Linux manuaalit:
+https://man7.org/linux/man-pages/man3/getline.3.html
+https://man7.org/linux/man-pages/man3/fopen.3.html
+https://man7.org/linux/man-pages/man3/malloc.3.html
+https://man7.org/linux/man-pages/man3/strcpy.3.html
+https://man7.org/linux/man-pages/man3/strlen.3.html
+https://man7.org/linux/man-pages/man3/strcmp.3.html
+https://man7.org/linux/man-pages/man3/strchr.3.html
+https://man7.org/linux/man-pages/man3/fprintf.3.html
+https://man7.org/linux/man-pages/man3/stdin.3.html
+
+Stack overflow:
+https://stackoverflow.com/questions/7563308/dynamic-array-in-c-realloc
+https://stackoverflow.com/questions/1986538/how-to-handle-realloc-when-it-fails-due-to-memory
+https://stackoverflow.com/questions/3536153/c-dynamically-growing-array
+https://stackoverflow.com/questions/3501338/c-read-file-line-by-line
+https://stackoverflow.com/questions/2550774/what-is-size-t-in-c
